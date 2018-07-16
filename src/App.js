@@ -8,13 +8,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  static _roundMinutesTo15() {
+    const hour = moment().hour();
+    const minute = moment().minute();
+    return moment().hour(hour).minute(Math.round(minute / 10) * 10);
+  }
+
   constructor (props) {
     super(props);
     this.state = {
       startDate: moment().date(1),
       endDate: moment(),
       startTime: moment().hour(0).minute(0),
-      endTime: moment()
+      endTime: App._roundMinutesTo15()
     };
 
     this.handleChangeStart = this.handleChangeStart.bind(this);
