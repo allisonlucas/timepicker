@@ -28,10 +28,18 @@
 }
 
 .datePicker {
+  height: 30px;
+}
+
+.timePicker input {
+  width: 70px;
+}
+
+.pickerWrapper > div {
   margin: 10px;
-  border-top: unset;
-  border-right: unset;
-  border-left: unset;
+  vertical-align: bottom;
+  height: 30px;
+  display: inline-block;
 }
 
 .react-datepicker__time-list {
